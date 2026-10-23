@@ -242,7 +242,7 @@
  blockquote cite { margin-top: auto; display: flex; align-items: center; gap: 12px; font-style: normal; font-weight: 600; font-size: 15px; color: var(--ink); }
  blockquote cite::after { content: "Google"; margin-left: auto; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-soft); font-weight: 500; }
  .av { width: 38px; height: 38px; border-radius: 50%; background: var(--accent); color: var(--accent-ink); display: grid; place-items: center; font: 700 17px var(--font-body); flex: none; }
- .reply { font-size: 14px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+ .reply { font-size: 14px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; color: var(--ink-soft); border-top-color: var(--line); } .reply strong { color: var(--ink); }
   .stripe { display: none; }
   .card { border: 0; box-shadow: 0 14px 34px -16px rgba(0,0,0,.35); }
   .about:not(.one) { grid-template-columns: 1fr; } .about > .pull { order: -1; text-align: center; border: 0; padding: 0 0 8px; font-size: clamp(26px, 4vw, 40px); max-width: 24ch; margin-inline: auto; }
@@ -253,22 +253,24 @@
  .qmore .qm-a { margin-top: 6px; font-weight: 600; font-size: 15px; } .qmore:hover .qm-a, .qmore:focus-visible .qm-a { text-decoration: underline; text-underline-offset: 4px; }
  .rv-go { display: inline-block; align-self: flex-start; margin-top: 8px; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; text-decoration: none; color: var(--accent); }
  .rv-go:hover { text-decoration: underline; text-underline-offset: 4px; }
+  .hours li.today { color: color-mix(in srgb, var(--accent) 62%, var(--ink)); font-weight: 700; }
+ footer p, footer p a { opacity: 1 !important; color: color-mix(in srgb, var(--wood-ink) 90%, transparent); }
   .hero .seal, .hero img.logo-stamp { display: none; }
  #fotos .gcta { color: #a3225f; } #clientes .rev-link .rs { color: #a86200; }
  .hero .eyebrow { color: #fff; font-size: 12px; } .hero .score, .hero .score > div { color: #fff; } .hero .stars { color: #fff1b8; }
  footer p, footer p a { opacity: 1 !important; color: rgba(255, 255, 255, .92); }
  .hero { --d: min(78vw, 330px); min-height: 0; padding: 36px 0 1px; margin-bottom: calc(var(--d) * .44 + 18px); z-index: 3; overflow: visible; }
  .hero > figure { overflow: hidden; }
- .hero > figure > img:first-child { -webkit-mask-image: none; mask-image: none; content: url("img/hero-m.jpg"); object-position: 50% 50%; }
+ .hero > figure > img:first-child { -webkit-mask-image: none; mask-image: none; content: url("img/hero-m.jpg?v=2e5e5088"); object-position: 50% 50%; }
  .hero > div:first-child { min-height: 0; justify-content: flex-start; padding: 0 max(24px, 7vw); }
  .hero h1 { font-size: clamp(46px, 13vw, 64px); }
  .hero .eyebrow { letter-spacing: .12em; opacity: 1; }
  .hero .lede { color: #fff; opacity: .96; max-width: 30ch; }
- .hero::after { content: ""; display: block; position: relative; z-index: 3; width: var(--d); height: var(--d); margin: 36px auto calc(var(--d) / -2); background: url("img/pet.webp") center / contain no-repeat; filter: drop-shadow(0 14px 22px rgba(10, 24, 90, .38)); }
- .hero::before { content: ""; position: absolute; z-index: 4; width: calc(var(--d) * .4); height: calc(var(--d) * .4); border-radius: 50%; background: #fff url("img/logo.jpg") center / cover; border: 4px solid #fff; box-shadow: 0 8px 18px rgba(10, 24, 90, .38); left: calc(50% - var(--d) * .6); bottom: calc(var(--d) * -.42); }
+ .hero::after { content: ""; display: block; position: relative; z-index: 3; width: var(--d); height: var(--d); margin: 36px auto calc(var(--d) / -2); background: url("img/pet.webp?v=6e3b8ca8") center / contain no-repeat; filter: drop-shadow(0 14px 22px rgba(10, 24, 90, .38)); }
+ .hero::before { content: ""; position: absolute; z-index: 4; width: calc(var(--d) * .4); height: calc(var(--d) * .4); border-radius: 50%; background: #fff url("img/logo.jpg?v=ff10e829") center / cover; border: 4px solid #fff; box-shadow: 0 8px 18px rgba(10, 24, 90, .38); left: calc(50% - var(--d) * .6); bottom: calc(var(--d) * -.42); }
  @media (min-width: 821px) {
    .hero { --d: min(34vw, 440px); padding: 0 0 1px; }
-   .hero > figure > img:first-child { content: url("img/hero.jpg"); }
+   .hero > figure > img:first-child { content: url("img/hero.jpg?v=3befcacf"); }
    .hero > div:first-child { padding: 84px max(28px, 7vw) 96px; max-width: 62%; justify-content: center; }
    .hero h1 { font-size: clamp(54px, 6.4vw, 96px); } .hero .lede { max-width: 24em; font-size: clamp(18px, 1.7vw, 22px); }
    .hero::after { position: absolute; right: max(28px, 8vw); bottom: calc(var(--d) / -2); margin: 0; }
@@ -321,7 +323,7 @@
 </div>
 <header class="bar">
   <div class="bar-in">
-    <a class="brand" href="#topo"><img src="img/logo.jpg" alt="" width="40" height="40">Nina Pet Shop</a>
+    <a class="brand" href="#topo"><img src="img/logo.jpg?v=ff10e829" alt="" width="40" height="40">Nina Pet Shop</a>
     <nav aria-label="Seções"><a href="#casa">Sobre</a><a href="#fotos">Fotos</a><a href="#clientes">Clientes</a><a href="#horarios">Horários</a></nav>
     <a class="btn" href="https://wa.me/5531997476432?text=Oi%2C%20tudo%20bem%3F%20Queria%20agendar%20um%20banho%20e%20tosa%20para%20o%20meu%20pet." target="_blank" rel="noopener">WhatsApp</a>
   </div>
@@ -338,7 +340,7 @@
       <a class="score" href="https://search.google.com/local/reviews?placeid=ChIJs3l1DiePpgARuxNcaFeDxvI" target="_blank" rel="noopener" aria-label="Nota 5,0 de 5 no Google, 318 avaliações"><strong>5,0</strong>
         <div><span class="stars" aria-hidden="true">★★★★★</span><br>318 avaliações no Google</div></a>
     </div>
-    <figure><img src="img/hero.jpg" alt="Foto de Nina Pet Shop" width="1080" height="675"><div class="seal" id="stamp" aria-label="Nota 5,0 no Google"><b>5,0</b><span>no Google</span></div></figure>
+    <figure><img src="img/hero.jpg?v=3befcacf" alt="Foto de Nina Pet Shop" width="1080" height="675"><div class="seal" id="stamp" aria-label="Nota 5,0 no Google"><b>5,0</b><span>no Google</span></div></figure>
   </div>
 </main>
 <div class="stripe" aria-hidden="true"></div>
@@ -358,24 +360,24 @@
     <h2>Cada pet sai daqui mais lindo e mais feliz</h2>
     <p class="sub">Alguns dos nossos clientes de quatro patas.</p><p class="gcta">Toque numa foto para ampliar</p>
     <div class="mosaic" id="mosaic">
-      <button class="tile v" type="button" aria-label="Ampliar foto 1"><span class="ph"><img src="img/g1.jpg" alt="Foto de Nina Pet Shop" loading="lazy"></span><span class="cap"></span></button>
-      <button class="tile v" type="button" aria-label="Ampliar foto 2"><span class="ph"><img src="img/g2.jpg" alt="Foto de Nina Pet Shop" loading="lazy"></span><span class="cap"></span></button>
-      <button class="tile v" type="button" aria-label="Ampliar foto 3"><span class="ph"><img src="img/g3.jpg" alt="Foto de Nina Pet Shop" loading="lazy"></span><span class="cap"></span></button>
-      <button class="tile b" type="button" aria-label="Ampliar foto 4"><span class="ph"><img src="img/g4.jpg" alt="Foto de Nina Pet Shop" loading="lazy"></span><span class="cap"></span></button>
-      <button class="tile v" type="button" aria-label="Ampliar foto 5"><span class="ph"><img src="img/g5.jpg" alt="Foto de Nina Pet Shop" loading="lazy"></span><span class="cap"></span></button>
-      <button class="tile v" type="button" aria-label="Ampliar foto 6"><span class="ph"><img src="img/g6.jpg" alt="Foto de Nina Pet Shop" loading="lazy"></span><span class="cap"></span></button>
-      <button class="tile b" type="button" aria-label="Ampliar foto 7"><span class="ph"><img src="img/g7.jpg" alt="Foto de Nina Pet Shop" loading="lazy"></span><span class="cap"></span></button>
-      <button class="tile v" type="button" aria-label="Ampliar foto 8"><span class="ph"><img src="img/g8.jpg" alt="Foto de Nina Pet Shop" loading="lazy"></span><span class="cap"></span></button>
-      <button class="tile v" type="button" aria-label="Ampliar foto 9"><span class="ph"><img src="img/g9.jpg" alt="Foto de Nina Pet Shop" loading="lazy"></span><span class="cap"></span></button>
-      <button class="tile v" type="button" aria-label="Ampliar foto 10"><span class="ph"><img src="img/g10.jpg" alt="Foto de Nina Pet Shop" loading="lazy"></span><span class="cap"></span></button>
-      <button class="tile v" type="button" aria-label="Ampliar foto 11"><span class="ph"><img src="img/g11.jpg" alt="Foto de Nina Pet Shop" loading="lazy"></span><span class="cap"></span></button>
-      <button class="tile v" type="button" aria-label="Ampliar foto 12"><span class="ph"><img src="img/g12.jpg" alt="Foto de Nina Pet Shop" loading="lazy"></span><span class="cap"></span></button>
-      <button class="tile v" type="button" aria-label="Ampliar foto 13"><span class="ph"><img src="img/g13.jpg" alt="Foto de Nina Pet Shop" loading="lazy"></span><span class="cap"></span></button>
-      <button class="tile v" type="button" aria-label="Ampliar foto 14"><span class="ph"><img src="img/g14.jpg" alt="Foto de Nina Pet Shop" loading="lazy"></span><span class="cap"></span></button>
-      <button class="tile b" type="button" aria-label="Ampliar foto 15"><span class="ph"><img src="img/g15.jpg" alt="Foto de Nina Pet Shop" loading="lazy"></span><span class="cap"></span></button>
-      <button class="tile v" type="button" aria-label="Ampliar foto 16"><span class="ph"><img src="img/g16.jpg" alt="Foto de Nina Pet Shop" loading="lazy"></span><span class="cap"></span></button>
-      <button class="tile s" type="button" aria-label="Ampliar foto 17"><span class="ph"><img src="img/g17.jpg" alt="Foto de Nina Pet Shop" loading="lazy"></span><span class="cap"></span></button>
-      <button class="tile s" type="button" aria-label="Ampliar foto 18"><span class="ph"><img src="img/g18.jpg" alt="Foto de Nina Pet Shop" loading="lazy"></span><span class="cap"></span></button>
+      <button class="tile v" type="button" aria-label="Ampliar foto 1"><span class="ph"><img src="img/g1.jpg?v=1caf629b" alt="Foto de Nina Pet Shop" loading="lazy"></span><span class="cap"></span></button>
+      <button class="tile v" type="button" aria-label="Ampliar foto 2"><span class="ph"><img src="img/g2.jpg?v=c6c121fc" alt="Foto de Nina Pet Shop" loading="lazy"></span><span class="cap"></span></button>
+      <button class="tile v" type="button" aria-label="Ampliar foto 3"><span class="ph"><img src="img/g3.jpg?v=8590c952" alt="Foto de Nina Pet Shop" loading="lazy"></span><span class="cap"></span></button>
+      <button class="tile b" type="button" aria-label="Ampliar foto 4"><span class="ph"><img src="img/g4.jpg?v=6ace3f44" alt="Foto de Nina Pet Shop" loading="lazy"></span><span class="cap"></span></button>
+      <button class="tile v" type="button" aria-label="Ampliar foto 5"><span class="ph"><img src="img/g5.jpg?v=0c59f14f" alt="Foto de Nina Pet Shop" loading="lazy"></span><span class="cap"></span></button>
+      <button class="tile v" type="button" aria-label="Ampliar foto 6"><span class="ph"><img src="img/g6.jpg?v=45bfb29b" alt="Foto de Nina Pet Shop" loading="lazy"></span><span class="cap"></span></button>
+      <button class="tile b" type="button" aria-label="Ampliar foto 7"><span class="ph"><img src="img/g7.jpg?v=a6a2284e" alt="Foto de Nina Pet Shop" loading="lazy"></span><span class="cap"></span></button>
+      <button class="tile v" type="button" aria-label="Ampliar foto 8"><span class="ph"><img src="img/g8.jpg?v=42282c87" alt="Foto de Nina Pet Shop" loading="lazy"></span><span class="cap"></span></button>
+      <button class="tile v" type="button" aria-label="Ampliar foto 9"><span class="ph"><img src="img/g9.jpg?v=94d15b0a" alt="Foto de Nina Pet Shop" loading="lazy"></span><span class="cap"></span></button>
+      <button class="tile v" type="button" aria-label="Ampliar foto 10"><span class="ph"><img src="img/g10.jpg?v=7dfff1dc" alt="Foto de Nina Pet Shop" loading="lazy"></span><span class="cap"></span></button>
+      <button class="tile v" type="button" aria-label="Ampliar foto 11"><span class="ph"><img src="img/g11.jpg?v=a436296d" alt="Foto de Nina Pet Shop" loading="lazy"></span><span class="cap"></span></button>
+      <button class="tile v" type="button" aria-label="Ampliar foto 12"><span class="ph"><img src="img/g12.jpg?v=339f12de" alt="Foto de Nina Pet Shop" loading="lazy"></span><span class="cap"></span></button>
+      <button class="tile v" type="button" aria-label="Ampliar foto 13"><span class="ph"><img src="img/g13.jpg?v=f7e28685" alt="Foto de Nina Pet Shop" loading="lazy"></span><span class="cap"></span></button>
+      <button class="tile v" type="button" aria-label="Ampliar foto 14"><span class="ph"><img src="img/g14.jpg?v=adb33db5" alt="Foto de Nina Pet Shop" loading="lazy"></span><span class="cap"></span></button>
+      <button class="tile b" type="button" aria-label="Ampliar foto 15"><span class="ph"><img src="img/g15.jpg?v=ccf9c8e8" alt="Foto de Nina Pet Shop" loading="lazy"></span><span class="cap"></span></button>
+      <button class="tile v" type="button" aria-label="Ampliar foto 16"><span class="ph"><img src="img/g16.jpg?v=6d0a9da7" alt="Foto de Nina Pet Shop" loading="lazy"></span><span class="cap"></span></button>
+      <button class="tile s" type="button" aria-label="Ampliar foto 17"><span class="ph"><img src="img/g17.jpg?v=45db0635" alt="Foto de Nina Pet Shop" loading="lazy"></span><span class="cap"></span></button>
+      <button class="tile s" type="button" aria-label="Ampliar foto 18"><span class="ph"><img src="img/g18.jpg?v=17c1c898" alt="Foto de Nina Pet Shop" loading="lazy"></span><span class="cap"></span></button>
     </div>
   </section>
 </main>
@@ -408,7 +410,7 @@ Muito obrigada!!🤩</p><cite>Mirian L.</cite><div class="reply"><strong>Respost
 
 <footer>
   <div class="wrap">
-    <span style="display:flex;align-items:center;gap:12px"><img src="img/logo.jpg" alt="" width="52" height="52" style="width:52px;height:52px;border-radius:50%;object-fit:cover;border:2px solid var(--salmon)"><strong style="font-family:var(--font-display);font-weight:400">Nina Pet Shop</strong></span>
+    <span style="display:flex;align-items:center;gap:12px"><img src="img/logo.jpg?v=ff10e829" alt="" width="52" height="52" style="width:52px;height:52px;border-radius:50%;object-fit:cover;border:2px solid var(--salmon)"><strong style="font-family:var(--font-display);font-weight:400">Nina Pet Shop</strong></span>
     <p>R. Brasilianita, 65 · Candelária · Belo Horizonte</p>
     <p style="flex-basis:100%;font-size:12px;opacity:.55">Fotos e avaliações públicas do Google Maps e do Instagram. Protótipo sujeito à autorização do estabelecimento. <a href="https://leoperon2.github.io/vintage-riders-prototipo/leosumiu?site=nina-pet-shop" target="_blank" rel="noopener">Plano B do seu site</a></p>
   </div>

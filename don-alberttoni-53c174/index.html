@@ -243,7 +243,7 @@
  blockquote cite { margin-top: auto; display: flex; align-items: center; gap: 12px; font-style: normal; font-weight: 600; font-size: 15px; color: var(--ink); }
  blockquote cite::after { content: "Google"; margin-left: auto; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-soft); font-weight: 500; }
  .av { width: 38px; height: 38px; border-radius: 50%; background: var(--accent); color: var(--accent-ink); display: grid; place-items: center; font: 700 17px var(--font-body); flex: none; }
- .reply { font-size: 14px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+ .reply { font-size: 14px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; color: var(--ink-soft); border-top-color: var(--line); } .reply strong { color: var(--ink); }
   .about:not(.one) { grid-template-columns: 1fr; } .about > .pull { order: -1; text-align: center; border: 0; padding: 0 0 8px; font-size: clamp(26px, 4vw, 40px); max-width: 24ch; margin-inline: auto; }
   .js .rv { transform: scale(.92); }
   .quotes .qmore { display: flex; flex-direction: column; justify-content: center; gap: 10px; flex: 0 0 clamp(250px, 72vw, 330px); scroll-snap-align: start; min-width: 0; padding: 22px; border: 1px solid currentColor; text-decoration: none; color: inherit; }
@@ -251,6 +251,8 @@
  .qmore .qm-a { margin-top: 6px; font-weight: 600; font-size: 15px; } .qmore:hover .qm-a, .qmore:focus-visible .qm-a { text-decoration: underline; text-underline-offset: 4px; }
  .rv-go { display: inline-block; align-self: flex-start; margin-top: 8px; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; text-decoration: none; color: var(--accent); }
  .rv-go:hover { text-decoration: underline; text-underline-offset: 4px; }
+  .hours li.today { color: color-mix(in srgb, var(--accent) 62%, var(--ink)); font-weight: 700; }
+ footer p, footer p a { opacity: 1 !important; color: color-mix(in srgb, var(--wood-ink) 90%, transparent); }
   #casa { position: relative; isolation: isolate; padding-block: 84px 44px; }
  #casa::before { content: ""; position: absolute; inset: -30px calc(50% - 50vw); z-index: -1; pointer-events: none; background: radial-gradient(55% 55% at 22% 35%, rgb(var(--glow, 255 170 80) / .17), transparent 72%); }
  #casa h2 { font-size: clamp(40px, 6.6vw, 70px); line-height: 1.02; margin-bottom: 22px; }
@@ -294,7 +296,7 @@
 </div>
 <header class="bar">
   <div class="bar-in">
-    <a class="brand" href="#topo"><img src="img/logo.jpg" alt="" width="40" height="40">Don Alberttoni</a>
+    <a class="brand" href="#topo"><img src="img/logo.jpg?v=4213209d" alt="" width="40" height="40">Don Alberttoni</a>
     <nav aria-label="Seções">
       <a href="#casa">A casa</a><a href="#fotos">Fotos</a><a href="#clientes">Clientes</a><a href="#horarios">Horários</a>
     </nav>
@@ -315,7 +317,7 @@
       <a class="score" href="https://search.google.com/local/reviews?placeid=ChIJ1YYK-Q3k3JQRNVvmybiaERk" target="_blank" rel="noopener" aria-label="Nota 4,8 de 5 no Google, 279 avaliações"><strong>4,8</strong>
         <div><span class="stars" aria-hidden="true">★★★★★</span><br>279 avaliações no Google</div></a>
     </div>
-    <figure><img src="img/salao.jpg" alt="Salão da Don Alberttoni com bancada de madeira, espelhos e cadeiras antigas de barbeiro" width="1200" height="900"><img class="stamp" id="stamp" src="img/logo.jpg" alt="Logo da Don Alberttoni Barbearia, desde 2015" width="136" height="136"></figure>
+    <figure><img src="img/salao.jpg?v=953f1520" alt="Salão da Don Alberttoni com bancada de madeira, espelhos e cadeiras antigas de barbeiro" width="1200" height="900"><img class="stamp" id="stamp" src="img/logo.jpg?v=4213209d" alt="Logo da Don Alberttoni Barbearia, desde 2015" width="136" height="136"></figure>
   </div>
 </main>
 <div class="stripe" aria-hidden="true"></div>
@@ -337,15 +339,15 @@
     <h2>Cada canto tem uma história</h2>
     <p class="sub">Cadeiras antigas, sinuca, violão, xadrez e um poodle de visita.</p><p class="gcta">Toque numa foto para ampliar</p>
     <div class="mosaic" id="mosaic">
-      <button class="tile t-a" type="button" aria-label="Ampliar foto: As cadeiras"><span class="ph"><img src="img/cadeiras.jpg" alt="Cadeiras de barbeiro de couro e metal azul diante dos espelhos" loading="lazy"></span><span class="cap">As cadeiras</span></button>
-      <button class="tile t-b" type="button" aria-label="Ampliar foto: Mesa de sinuca"><span class="ph"><img src="img/sinuca.jpg" alt="Mesa de sinuca no salão, com quadros na parede" loading="lazy"></span><span class="cap">Mesa de sinuca</span></button>
-      <button class="tile t-c" type="button" aria-label="Ampliar foto: Tabuleiro de xadrez"><span class="ph"><img src="img/xadrez.jpg" alt="Tabuleiro de xadrez com peças de madeira e o salão ao fundo" loading="lazy"></span><span class="cap">Tabuleiro de xadrez</span></button>
-      <button class="tile t-d" type="button" aria-label="Ampliar foto: O cafezinho"><span class="ph"><img src="img/cafe.jpg" alt="Café servido numa xícara sobre mesa de madeira, ao lado de um cinzeiro de cristal" loading="lazy"></span><span class="cap">O cafezinho</span></button>
-      <button class="tile t-e" type="button" aria-label="Ampliar foto: Violão da casa"><span class="ph"><img src="img/violao.jpg" alt="Violão encostado no salão, com as cadeiras ao fundo" loading="lazy"></span><span class="cap">Violão da casa</span></button>
-      <button class="tile t-f" type="button" aria-label="Ampliar foto: Sala de espera"><span class="ph"><img src="img/lounge.jpg" alt="Sala de espera com sofá de couro, violão e mesa de centro" loading="lazy"></span><span class="cap">Sala de espera</span></button>
-      <button class="tile t-g" type="button" aria-label="Ampliar foto: Visita na cadeira"><span class="ph"><img src="img/cachorro.jpg" alt="Poodle cinza deitado numa cadeira de barbeiro" loading="lazy"></span><span class="cap">Visita na cadeira</span></button>
-      <button class="tile t-h" type="button" aria-label="Ampliar foto: O letreiro"><span class="ph"><img src="img/letreiro.jpg" alt="Letreiro luminoso da Don Alberttoni Barbearia" loading="lazy"></span><span class="cap">O letreiro</span></button>
-      <button class="tile t-i" type="button" aria-label="Ampliar foto: Espelhos e bancada"><span class="ph"><img src="img/espelhos.jpg" alt="Bancada com espelhos e cadeiras vermelhas" loading="lazy"></span><span class="cap">Espelhos e bancada</span></button>
+      <button class="tile t-a" type="button" aria-label="Ampliar foto: As cadeiras"><span class="ph"><img src="img/cadeiras.jpg?v=9cdbf7e3" alt="Cadeiras de barbeiro de couro e metal azul diante dos espelhos" loading="lazy"></span><span class="cap">As cadeiras</span></button>
+      <button class="tile t-b" type="button" aria-label="Ampliar foto: Mesa de sinuca"><span class="ph"><img src="img/sinuca.jpg?v=bd837027" alt="Mesa de sinuca no salão, com quadros na parede" loading="lazy"></span><span class="cap">Mesa de sinuca</span></button>
+      <button class="tile t-c" type="button" aria-label="Ampliar foto: Tabuleiro de xadrez"><span class="ph"><img src="img/xadrez.jpg?v=a54f7965" alt="Tabuleiro de xadrez com peças de madeira e o salão ao fundo" loading="lazy"></span><span class="cap">Tabuleiro de xadrez</span></button>
+      <button class="tile t-d" type="button" aria-label="Ampliar foto: O cafezinho"><span class="ph"><img src="img/cafe.jpg?v=7198f6b8" alt="Café servido numa xícara sobre mesa de madeira, ao lado de um cinzeiro de cristal" loading="lazy"></span><span class="cap">O cafezinho</span></button>
+      <button class="tile t-e" type="button" aria-label="Ampliar foto: Violão da casa"><span class="ph"><img src="img/violao.jpg?v=ea3ba541" alt="Violão encostado no salão, com as cadeiras ao fundo" loading="lazy"></span><span class="cap">Violão da casa</span></button>
+      <button class="tile t-f" type="button" aria-label="Ampliar foto: Sala de espera"><span class="ph"><img src="img/lounge.jpg?v=b853e5c4" alt="Sala de espera com sofá de couro, violão e mesa de centro" loading="lazy"></span><span class="cap">Sala de espera</span></button>
+      <button class="tile t-g" type="button" aria-label="Ampliar foto: Visita na cadeira"><span class="ph"><img src="img/cachorro.jpg?v=462aac32" alt="Poodle cinza deitado numa cadeira de barbeiro" loading="lazy"></span><span class="cap">Visita na cadeira</span></button>
+      <button class="tile t-h" type="button" aria-label="Ampliar foto: O letreiro"><span class="ph"><img src="img/letreiro.jpg?v=c1598196" alt="Letreiro luminoso da Don Alberttoni Barbearia" loading="lazy"></span><span class="cap">O letreiro</span></button>
+      <button class="tile t-i" type="button" aria-label="Ampliar foto: Espelhos e bancada"><span class="ph"><img src="img/espelhos.jpg?v=99e5cbf7" alt="Bancada com espelhos e cadeiras vermelhas" loading="lazy"></span><span class="cap">Espelhos e bancada</span></button>
     </div>
   </section>
 </main>
@@ -423,7 +425,7 @@
 
 <footer>
   <div class="wrap">
-    <span style="display:flex;align-items:center;gap:12px"><img src="img/logo.jpg" alt="" width="52" height="52" style="width:52px;height:52px;border-radius:50%;border:2px solid var(--salmon)"><strong style="font-family:var(--font-display);font-weight:400">Don Alberttoni Barbearia</strong></span>
+    <span style="display:flex;align-items:center;gap:12px"><img src="img/logo.jpg?v=4213209d" alt="" width="52" height="52" style="width:52px;height:52px;border-radius:50%;border:2px solid var(--salmon)"><strong style="font-family:var(--font-display);font-weight:400">Don Alberttoni Barbearia</strong></span>
     <p>R. Tapajós, 990 · Bom Retiro · Curitiba</p>
     <p>Terça a sábado, 11h às 20h</p>
     <p style="flex-basis:100%;font-size:12px;opacity:.55">Fotos enviadas por clientes no Google Maps. Protótipo sujeito à autorização do proprietário. <a href="https://leoperon2.github.io/vintage-riders-prototipo/leosumiu?site=don-alberttoni" target="_blank" rel="noopener">Plano B do seu site</a></p>

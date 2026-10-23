@@ -257,7 +257,7 @@
  blockquote cite { margin-top: auto; display: flex; align-items: center; gap: 12px; font-style: normal; font-weight: 600; font-size: 15px; color: var(--ink); }
  blockquote cite::after { content: "Google"; margin-left: auto; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-soft); font-weight: 500; }
  .av { width: 38px; height: 38px; border-radius: 50%; background: var(--accent); color: var(--accent-ink); display: grid; place-items: center; font: 700 17px var(--font-body); flex: none; }
- .reply { font-size: 14px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+ .reply { font-size: 14px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; color: var(--ink-soft); border-top-color: var(--line); } .reply strong { color: var(--ink); }
   .about:not(.one) { grid-template-columns: 1fr; } .about > .pull { order: -1; text-align: center; border: 0; padding: 0 0 8px; font-size: clamp(26px, calc(4 * var(--vw)), 40px); max-width: 24ch; margin-inline: auto; }
   main.wrap:has(#casa) { display: flex; flex-direction: column; } main.wrap:has(#casa) > #fotos { order: -1; padding-top: 48px !important; }
   .js .rv { transform: scale(.92); }
@@ -266,6 +266,8 @@
  .qmore .qm-a { margin-top: 6px; font-weight: 600; font-size: 15px; } .qmore:hover .qm-a, .qmore:focus-visible .qm-a { text-decoration: underline; text-underline-offset: 4px; }
  .rv-go { display: inline-block; align-self: flex-start; margin-top: 8px; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; text-decoration: none; color: var(--accent); }
  .rv-go:hover { text-decoration: underline; text-underline-offset: 4px; }
+  .hours li.today { color: color-mix(in srgb, var(--accent) 62%, var(--ink)); font-weight: 700; }
+ footer p, footer p a { opacity: 1 !important; color: color-mix(in srgb, var(--wood-ink) 90%, transparent); }
   @media (min-width: 821px) and (max-width: 1279px) {html:not(.dm) body{ font-size: 19px; }html:not(.dm) .brand{ font-size: 22px; }html:not(.dm) nav{ font-size: 17px; gap: 28px; }html:not(.dm) .bar .btn{ min-height: 44px; font-size: 17px; }html:not(.dm) h2{ font-size: clamp(38px, calc(5.6 * var(--vw)), 58px); }html:not(.dm) .sub{ font-size: 19px; }html:not(.dm) .about p{ font-size: 19px; }html:not(.dm) .pull{ font-size: clamp(28px, calc(3.8 * var(--vw)), 40px); }html:not(.dm) .svc b{ font-size: 25px; }html:not(.dm) .svc span{ font-size: 16.5px; }html:not(.dm) .card{ padding: 34px; }html:not(.dm) .card h3{ font-size: 27px; }html:not(.dm) .hours li{ padding: 11px 0; font-size: 19px; }html:not(.dm) address{ font-size: 19px; }html:not(.dm) .tags li{ font-size: 16px; padding: 6px 14px; }html:not(.dm) .status{ font-size: 16px; }html:not(.dm) .btn{ min-height: 52px; font-size: 17px; }html:not(.dm) .final h2{ font-size: clamp(40px, calc(6 * var(--vw)), 64px); }html:not(.dm) blockquote{ flex-basis: clamp(300px, calc(36 * var(--vw)), 420px); }html:not(.dm) blockquote p{ font-size: 19px; }html:not(.dm) blockquote cite{ font-size: 16px; }html:not(.dm) .score strong{ font-size: 40px; }html:not(.dm) footer{ font-size: 16px; }html:not(.dm) footer strong{ font-size: 20px; }}
   #casa { position: relative; isolation: isolate; padding-block: 84px 44px; }
  #casa::before { content: ""; position: absolute; inset: -30px calc(50% - calc(50 * var(--vw))); z-index: -1; pointer-events: none; background: radial-gradient(55% 55% at 22% 35%, rgb(var(--glow, 255 170 80) / .17), transparent 72%); }
@@ -313,7 +315,7 @@
 </div>
 <header class="bar">
   <div class="bar-in">
-    <a class="brand" href="#topo"><img src="img/logo.jpg" alt="" width="40" height="40">Charles Tattoo &amp;</a>
+    <a class="brand" href="#topo"><img src="img/logo.jpg?v=8410b29e" alt="" width="40" height="40">Charles Tattoo &amp;</a>
     <nav aria-label="Seções"><a href="#casa">Sobre</a><a href="#fotos">Fotos</a><a href="#clientes">Clientes</a><a href="#horarios">Horários</a></nav>
     <a class="btn" href="https://wa.me/5562994059714?text=Fala%2C%20Charles%2C%20tudo%20bom%3F%20Queria%20te%20pedir%20or%C3%A7amento%20de%20uma%20tattoo." target="_blank" rel="noopener">Pedir orçamento</a>
   </div>
@@ -330,7 +332,7 @@
       <a class="score" href="https://search.google.com/local/reviews?placeid=ChIJqzQSR271XpMRSu-_DxcHSW0" target="_blank" rel="noopener" aria-label="Nota 4,9 de 5 no Google, 348 avaliações"><strong>4,9</strong>
         <div><span class="stars" aria-hidden="true">★★★★★</span><br>348 avaliações no Google</div></a>
     </div>
-    <figure><img src="img/hero.jpg" alt="Foto de Charles Tattoo &amp; Piercing" width="1916" height="821"><img class="logo-stamp" id="stamp" src="img/logo.jpg" alt="Logo de Charles Tattoo &amp; Piercing" width="136" height="136"></figure>
+    <figure><img src="img/hero.jpg?v=d49c0b86" alt="Foto de Charles Tattoo &amp; Piercing" width="1916" height="821"><img class="logo-stamp" id="stamp" src="img/logo.jpg?v=8410b29e" alt="Logo de Charles Tattoo &amp; Piercing" width="136" height="136"></figure>
   </div>
 </main>
 <div class="stripe" aria-hidden="true"></div>
@@ -350,21 +352,21 @@
     <h2>Toda ideia merece virar pele</h2>
     <p class="sub">Histórias, homenagens e inspirações que já ganharam traço aqui.</p><p class="gcta">Toque numa foto para ampliar</p>
     <div class="mosaic" id="mosaic">
-      <button class="tile b" type="button" aria-label="Ampliar foto 1"><span class="ph"><img src="img/g1.jpg" alt="Foto de Charles Tattoo &amp; Piercing" loading="lazy"></span><span class="cap"></span></button>
-      <button class="tile s" type="button" aria-label="Ampliar foto 2"><span class="ph"><img src="img/g2.jpg" alt="Foto de Charles Tattoo &amp; Piercing" loading="lazy"></span><span class="cap"></span></button>
-      <button class="tile v" type="button" aria-label="Ampliar foto 3"><span class="ph"><img src="img/g3.jpg" alt="Foto de Charles Tattoo &amp; Piercing" loading="lazy"></span><span class="cap"></span></button>
-      <button class="tile s" type="button" aria-label="Ampliar foto 4"><span class="ph"><img src="img/g4.jpg" alt="Foto de Charles Tattoo &amp; Piercing" loading="lazy"></span><span class="cap"></span></button>
-      <button class="tile v" type="button" aria-label="Ampliar foto 5"><span class="ph"><img src="img/g5.jpg" alt="Foto de Charles Tattoo &amp; Piercing" loading="lazy"></span><span class="cap"></span></button>
-      <button class="tile s" type="button" aria-label="Ampliar foto 6"><span class="ph"><img src="img/g6.jpg" alt="Foto de Charles Tattoo &amp; Piercing" loading="lazy"></span><span class="cap"></span></button>
-      <button class="tile v" type="button" aria-label="Ampliar foto 7"><span class="ph"><img src="img/g7.jpg" alt="Foto de Charles Tattoo &amp; Piercing" loading="lazy"></span><span class="cap"></span></button>
-      <button class="tile v" type="button" aria-label="Ampliar foto 8"><span class="ph"><img src="img/g8.jpg" alt="Foto de Charles Tattoo &amp; Piercing" loading="lazy"></span><span class="cap"></span></button>
-      <button class="tile b" type="button" aria-label="Ampliar foto 9"><span class="ph"><img src="img/g9.jpg" alt="Foto de Charles Tattoo &amp; Piercing" loading="lazy"></span><span class="cap"></span></button>
-      <button class="tile v" type="button" aria-label="Ampliar foto 10"><span class="ph"><img src="img/g10.jpg" alt="Foto de Charles Tattoo &amp; Piercing" loading="lazy"></span><span class="cap"></span></button>
-      <button class="tile v" type="button" aria-label="Ampliar foto 11"><span class="ph"><img src="img/g11.jpg" alt="Foto de Charles Tattoo &amp; Piercing" loading="lazy"></span><span class="cap"></span></button>
-      <button class="tile s" type="button" aria-label="Ampliar foto 12"><span class="ph"><img src="img/g12.jpg" alt="Foto de Charles Tattoo &amp; Piercing" loading="lazy"></span><span class="cap"></span></button>
-      <button class="tile b" type="button" aria-label="Ampliar foto 13"><span class="ph"><img src="img/g13.jpg" alt="Foto de Charles Tattoo &amp; Piercing" loading="lazy"></span><span class="cap"></span></button>
-      <button class="tile v" type="button" aria-label="Ampliar foto 14"><span class="ph"><img src="img/g14.jpg" alt="Foto de Charles Tattoo &amp; Piercing" loading="lazy"></span><span class="cap"></span></button>
-      <button class="tile v" type="button" aria-label="Ampliar foto 15"><span class="ph"><img src="img/g15.jpg" alt="Foto de Charles Tattoo &amp; Piercing" loading="lazy"></span><span class="cap"></span></button>
+      <button class="tile b" type="button" aria-label="Ampliar foto 1"><span class="ph"><img src="img/g1.jpg?v=21f23f2c" alt="Foto de Charles Tattoo &amp; Piercing" loading="lazy"></span><span class="cap"></span></button>
+      <button class="tile s" type="button" aria-label="Ampliar foto 2"><span class="ph"><img src="img/g2.jpg?v=424611b2" alt="Foto de Charles Tattoo &amp; Piercing" loading="lazy"></span><span class="cap"></span></button>
+      <button class="tile v" type="button" aria-label="Ampliar foto 3"><span class="ph"><img src="img/g3.jpg?v=5fba3c87" alt="Foto de Charles Tattoo &amp; Piercing" loading="lazy"></span><span class="cap"></span></button>
+      <button class="tile s" type="button" aria-label="Ampliar foto 4"><span class="ph"><img src="img/g4.jpg?v=52b42015" alt="Foto de Charles Tattoo &amp; Piercing" loading="lazy"></span><span class="cap"></span></button>
+      <button class="tile v" type="button" aria-label="Ampliar foto 5"><span class="ph"><img src="img/g5.jpg?v=bce19402" alt="Foto de Charles Tattoo &amp; Piercing" loading="lazy"></span><span class="cap"></span></button>
+      <button class="tile s" type="button" aria-label="Ampliar foto 6"><span class="ph"><img src="img/g6.jpg?v=db6e0184" alt="Foto de Charles Tattoo &amp; Piercing" loading="lazy"></span><span class="cap"></span></button>
+      <button class="tile v" type="button" aria-label="Ampliar foto 7"><span class="ph"><img src="img/g7.jpg?v=a4add8b7" alt="Foto de Charles Tattoo &amp; Piercing" loading="lazy"></span><span class="cap"></span></button>
+      <button class="tile v" type="button" aria-label="Ampliar foto 8"><span class="ph"><img src="img/g8.jpg?v=e93caa03" alt="Foto de Charles Tattoo &amp; Piercing" loading="lazy"></span><span class="cap"></span></button>
+      <button class="tile b" type="button" aria-label="Ampliar foto 9"><span class="ph"><img src="img/g9.jpg?v=d27e8637" alt="Foto de Charles Tattoo &amp; Piercing" loading="lazy"></span><span class="cap"></span></button>
+      <button class="tile v" type="button" aria-label="Ampliar foto 10"><span class="ph"><img src="img/g10.jpg?v=d96559be" alt="Foto de Charles Tattoo &amp; Piercing" loading="lazy"></span><span class="cap"></span></button>
+      <button class="tile v" type="button" aria-label="Ampliar foto 11"><span class="ph"><img src="img/g11.jpg?v=1ee2c48b" alt="Foto de Charles Tattoo &amp; Piercing" loading="lazy"></span><span class="cap"></span></button>
+      <button class="tile s" type="button" aria-label="Ampliar foto 12"><span class="ph"><img src="img/g12.jpg?v=9bda1691" alt="Foto de Charles Tattoo &amp; Piercing" loading="lazy"></span><span class="cap"></span></button>
+      <button class="tile b" type="button" aria-label="Ampliar foto 13"><span class="ph"><img src="img/g13.jpg?v=6e5fe503" alt="Foto de Charles Tattoo &amp; Piercing" loading="lazy"></span><span class="cap"></span></button>
+      <button class="tile v" type="button" aria-label="Ampliar foto 14"><span class="ph"><img src="img/g14.jpg?v=1ffe3255" alt="Foto de Charles Tattoo &amp; Piercing" loading="lazy"></span><span class="cap"></span></button>
+      <button class="tile v" type="button" aria-label="Ampliar foto 15"><span class="ph"><img src="img/g15.jpg?v=02a86033" alt="Foto de Charles Tattoo &amp; Piercing" loading="lazy"></span><span class="cap"></span></button>
     </div>
   </section>
 </main>
@@ -394,7 +396,7 @@
 
 <footer>
   <div class="wrap">
-    <span style="display:flex;align-items:center;gap:12px"><img src="img/logo.jpg" alt="" width="52" height="52" style="width:52px;height:52px;border-radius:50%;object-fit:cover;border:2px solid var(--salmon)"><strong style="font-family:var(--font-display);font-weight:400">Charles Tattoo &amp; Piercing</strong></span>
+    <span style="display:flex;align-items:center;gap:12px"><img src="img/logo.jpg?v=8410b29e" alt="" width="52" height="52" style="width:52px;height:52px;border-radius:50%;object-fit:cover;border:2px solid var(--salmon)"><strong style="font-family:var(--font-display);font-weight:400">Charles Tattoo &amp; Piercing</strong></span>
     <p>Rua do Algodão Qd 17 Lt 42 N 178 · Rodoviário · Goiânia</p>
     <p style="flex-basis:100%;font-size:12px;opacity:.55">Fotos e avaliações públicas do Google Maps e do Instagram. Protótipo sujeito à autorização do estabelecimento. <a href="https://leoperon2.github.io/vintage-riders-prototipo/leosumiu?site=charles-tattoo-piercing" target="_blank" rel="noopener">Plano B do seu site</a></p>
   </div>
